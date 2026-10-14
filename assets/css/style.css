@@ -699,20 +699,34 @@ ul { padding-left: 1.2em; }
 .ticket dd { margin: 0; font-weight: 600; }
 @media (max-width: 520px) { .ticket dl { grid-template-columns: 1fr; gap: 0.2rem; } .ticket dd { margin-bottom: 0.9rem; } }
 
-/* Grille 3 × 3 du principe */
-.grille-9 { display: grid; grid-template-columns: auto repeat(3, 1fr); gap: 0.8rem; align-items: center; max-width: 34rem; }
-.grille-9 .ligne-titre { font-family: var(--f-display); font-weight: 700; font-size: 1.15rem; padding-right: 0.6rem; }
-.grille-9 .g {
-  aspect-ratio: 1;
-  border-radius: var(--blob-1);
-  background: var(--c);
-  display: grid; place-items: center;
-  color: var(--lin); font-size: 0.72rem; font-weight: 700; text-align: center; line-height: 1.15;
-  padding: 0.4rem;
-  animation: morph 11s ease-in-out infinite alternate;
+/* Grille 3 × 3 du principe : une ligne par service, photos en cercles parfaits */
+.grille-9 { display: grid; gap: 1.6rem; max-width: 34rem; width: 100%; }
+.grille-9 .ligne-titre {
+  display: block; margin-bottom: 0.7rem;
+  font-family: var(--f-display); font-weight: 700; font-size: 1.25rem; color: var(--c);
 }
-.grille-9 .g:nth-child(4n+3) { animation-delay: -4s; border-radius: var(--blob-2); }
-.grille-9 .g:nth-child(4n+4) { animation-delay: -7s; border-radius: var(--blob-3); }
+.g-plats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
+.grille-9 .g { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 0; }
+.grille-9 .g-photo { position: relative; display: block; width: min(100%, 8.5rem); aspect-ratio: 1; margin-bottom: 0.6rem; }
+.grille-9 .g-photo > img:first-child {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  clip-path: circle(50%);
+  box-shadow: none;
+
+}
+/* Anneau de couleur autour de la photo */
+.grille-9 .g-photo::after {
+  content: ""; position: absolute; inset: -5px; border-radius: 50%;
+  border: 3px solid var(--c); pointer-events: none;
+}
+.grille-9 .g-drapeau {
+  position: absolute; z-index: 1; right: -2%; bottom: -2%;
+  width: 28%; height: auto; aspect-ratio: 1; border-radius: 50%;
+  border: 2px solid var(--lin); box-shadow: var(--ombre);
+}
+.grille-9 .g-nom { font-weight: 700; font-size: 0.85rem; line-height: 1.2; text-wrap: balance; overflow-wrap: normal; hyphens: none; }
+.grille-9 .g small { display: block; font-size: 0.72rem; color: var(--encre-douce); margin-top: 0.15rem; }
+@media (max-width: 420px) { .grille-9 .g-nom { font-size: 0.78rem; } .g-plats { gap: 0.7rem; } }
 
 /* FAQ native */
 .faq { display: grid; gap: 0.9rem; margin-top: 2rem; max-width: 50rem; }
@@ -909,8 +923,9 @@ ul { padding-left: 1.2em; }
 .membre:hover .portrait::after { opacity: 0; }
 .membre:hover .portrait img { scale: 1.06; }
 /* Illustration (pas une photo) : couleurs d'origine, sans teinte */
-.portrait--dessin img { filter: none; }
-.portrait--dessin::after { display: none; }
+/* Illustration très pâle : on renforce le contraste avant la teinte, sinon le rose disparaît */
+.portrait--dessin img { filter: grayscale(1) brightness(0.5) contrast(5) brightness(1.8); }
+.membre:hover .portrait--dessin img { filter: none; }
 .membre .role { font-family: var(--f-accent); color: var(--terracotta-texte); font-size: 1.15rem; display: block; }
 .membre h3 { font-size: 1.4rem; margin: 0.1em 0 0.3em; }
 .membre .reserve { font-size: 0.88rem; color: var(--encre-douce); margin: 0; }
@@ -1090,7 +1105,6 @@ ul { padding-left: 1.2em; }
 /* Aucun défilement horizontal parasite (éléments animés qui glissent depuis les côtés) */
 html, body { overflow-x: hidden; overflow-x: clip; }
 .section, .intro, .vague-texte { overflow-x: clip; }
-.grille-9 .g { font-size: 0.8rem; hyphens: auto; }
 .pin--arret .pin-etiquette { bottom: auto; top: 50%; left: auto; right: calc(100% + 10px); translate: 0 -50%; }
 
 /* Carte MapLibre aux couleurs du site */
