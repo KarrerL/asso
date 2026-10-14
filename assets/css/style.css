@@ -674,6 +674,13 @@ ul { padding-left: 1.2em; }
   font-family: var(--f-display); font-weight: 900; color: var(--lin);
   font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 0.9;
 }
+/* Emplacement réservé (contenu à venir) au centre du visuel */
+.intro-visuel .emplacement {
+  display: grid; place-items: center;
+  width: 46%; aspect-ratio: 1; border-radius: 50%;
+  border: 3px dashed color-mix(in srgb, var(--lin) 75%, transparent);
+}
+.intro-visuel .emplacement .a-venir { border: 0; color: var(--lin); font-size: clamp(0.62rem, 1.4vw, 0.78rem); }
 @media (max-width: 760px) {
   .intro { grid-template-columns: 1fr; min-height: 0; padding-top: 7rem; }
   .intro-visuel { width: min(72%, 18rem); order: -1; }
@@ -923,9 +930,6 @@ ul { padding-left: 1.2em; }
 .membre:hover .portrait::after { opacity: 0; }
 .membre:hover .portrait img { scale: 1.06; }
 /* Illustration (pas une photo) : couleurs d'origine, sans teinte */
-/* Illustration très pâle : on renforce le contraste avant la teinte, sinon le rose disparaît */
-.portrait--dessin img { filter: grayscale(1) brightness(0.5) contrast(5) brightness(1.8); }
-.membre:hover .portrait--dessin img { filter: none; }
 .membre .role { font-family: var(--f-accent); color: var(--terracotta-texte); font-size: 1.15rem; display: block; }
 .membre h3 { font-size: 1.4rem; margin: 0.1em 0 0.3em; }
 .membre .reserve { font-size: 0.88rem; color: var(--encre-douce); margin: 0; }
