@@ -233,6 +233,7 @@
 
   /* Menu (page Le menu) : rendu à partir de assets/js/menu-data.js */
   const carte = document.getElementById("carte");
+  if (window.MENU) { rendreChoix(window.MENU); rendreGrille(window.MENU); }
   if (carte && window.MENU) rendreMenu(carte, window.MENU);
 
   if (!anime) return;
@@ -412,6 +413,40 @@
 
 /* Rendu des cartes du menu, hors de la fermeture pour rester lisible.
    Les données vivent dans assets/js/menu-data.js. */
+/* Accueil (« Compose ton plateau ») et page L'événement (« Le principe ») :
+   les plats viennent de assets/js/menu-data.js, seul fichier à modifier. */
+function echapper(s) { return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+function rendreChoix(menu) {
+  const SERVICES_MENU = { entree: "entrees", plat: "plats", dessert: "desserts" };
+  document.querySelectorAll("fieldset.choix").forEach((fs) => {
+    const service = Object.keys(SERVICES_MENU).find((s) => fs.classList.contains(`choix--${s}`));
+    const plats = service && menu[SERVICES_MENU[service]];
+    if (!plats || !plats.length) return;
+    const legende = fs.querySelector("legend").outerHTML;
+    fs.innerHTML = legende + plats.map((p, i) => {
+      const id = `${service}-${i + 1}`;
+      return `<input type="radio" name="${service}" id="${id}" value="${i + 1}" data-drapeau="${echapper(p.drapeau)}">` +
+        `<label for="${id}"><span class="choix-visuel"><span class="choix-photo">${p.photo ? `<img src="${echapper(p.photo)}" alt="" loading="lazy">` : ""}</span>` +
+        `${p.drapeau ? `<img class="choix-drapeau" src="assets/img/drapeaux/${echapper(p.drapeau)}.svg" alt="" width="32" height="32">` : ""}</span>` +
+        `<span class="choix-nom">${echapper(p.nom) || "À venir"}</span><small>${echapper(p.pays)}</small></label>`;
+    }).join("");
+  });
+}
+
+function rendreGrille(menu) {
+  const SERVICES_MENU = { entree: "entrees", plat: "plats", dessert: "desserts" };
+  document.querySelectorAll(".grille-9 .g-ligne").forEach((ligne, n) => {
+    const plats = menu[Object.values(SERVICES_MENU)[n]];
+    const liste = ligne.querySelector(".g-plats");
+    if (!plats || !liste) return;
+    liste.innerHTML = plats.map((p) =>
+      `<li class="g"><span class="g-photo">${p.photo ? `<img src="${echapper(p.photo)}" alt="" loading="lazy">` : ""}` +
+      `${p.drapeau ? `<img class="g-drapeau" src="assets/img/drapeaux/${echapper(p.drapeau)}.svg" alt="" width="24" height="24">` : ""}</span>` +
+      `<span class="g-nom">${echapper(p.nom) || "À venir"}</span><small>${echapper(p.pays)}</small></li>`).join("");
+  });
+}
+
 function rendreMenu(racine, menu) {
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const AV = '<span class="a-venir">À venir</span>';
