@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Participer · Nom de l'association</title>
+<meta name="description" content="Proposer une cuisine, aider le jour J ou soutenir le repas du monde : toutes les façons de participer.">
+<meta name="theme-color" content="#f4eadb">
+<!-- À ajouter quand le logo existera : <link rel="icon" href="assets/img/logo/favicon.svg"> -->
+<link rel="stylesheet" href="assets/css/polices.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{if(sessionStorage.getItem("voile")==="1"&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("voile-entree")}catch(e){}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<div class="voile" aria-hidden="true"><span></span></div>
+
+<a class="logo-bulle" href="index.html" aria-label="Nom de l'association, accueil">
+  <!-- Emplacement du logo : remplacer ce bloc par <img src="assets/img/logo/logo.svg" alt=""> -->
+  <span class="logo-slot" aria-hidden="true">Logo</span>
+  <span class="logo-nom"><span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span></span>
+</a>
+
+<nav class="dock" aria-label="Navigation principale">
+  <a href="index.html">Accueil</a><a href="evenement.html">L'événement</a><a href="menu.html">Le menu</a><a href="participer.html" aria-current="page">Participer</a><a href="association.html">L'asso</a>
+  <a class="dock-date" href="evenement.html#infos">8.02.27</a>
+</nav>
+
+<button class="menu-bouton" type="button" aria-expanded="false" aria-controls="rideau" aria-label="Ouvrir le menu"><span></span><span></span></button>
+<nav class="rideau" id="rideau" aria-label="Navigation mobile">
+  <span class="forme" aria-hidden="true"></span><span class="forme" aria-hidden="true"></span>
+  <ul><li><a href="index.html">Accueil</a></li><li><a href="evenement.html">L'événement</a></li><li><a href="menu.html">Le menu</a></li><li><a href="participer.html" aria-current="page">Participer</a></li><li><a href="association.html">L'asso</a></li></ul>
+  <p class="rideau-info">Repas du monde · lundi 8 février 2027 · 11 h 30 – 14 h</p>
+</nav>
+
+<main id="contenu">
+<header class="intro">
+  <div>
+    <span class="surtitre" data-reveal><span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span></span>
+    <h1 data-split>Mets la main à la pâte</h1>
+    <p data-reveal>Proposer une recette, donner un coup de main le jour J ou soutenir le projet : il y a plusieurs façons de faire vivre ce repas.</p>
+    
+  </div>
+  <div class="intro-visuel" style="--c:var(--olive-clair);--c2:var(--figue)" aria-hidden="true">
+    <span class="forme" data-flotte="-12"></span><span class="forme"></span>
+    <svg class="anneau" viewBox="0 0 300 300" aria-hidden="true"><defs><path id="anneau-part" d="M150.0,150.0 m-140,0 a140,140 0 1,1 280,0 a140,140 0 1,1 -280,0"/></defs><text><textPath href="#anneau-part" textLength="872" lengthAdjust="spacing">proposer ✺ aider ✺ soutenir ✺ partager ✺ </textPath></text></svg>
+    <span class="centre">toi ?</span>
+  </div>
+</header>
+<section class="section" id="proposer" aria-labelledby="titre-proposer">
+  <div class="conteneur duo">
+    <div>
+      <span class="surtitre">1. Proposer</span>
+      <h2 id="titre-proposer" data-split>Une cuisine, une recette</h2>
+      <p>Une recette de ton pays, de ta famille, d'un voyage ? Propose-la via le sondage de novembre 2026 ou envoie-nous un message.</p>
+      <p>Le choix final est validé avec le Crous et les chefs.</p>
+    </div>
+    <div style="display:grid;gap:1rem;justify-items:start;align-content:center" data-cascade>
+      <!-- Remplacer par le lien du sondage Google Forms -->
+      <span class="bouton" aria-disabled="true">Lien du sondage à venir</span>
+      <span class="etiquette" style="--r:-2deg">Par e-mail : <span class="a-venir">E-mail à venir</span></span>
+      <span class="etiquette etiquette--safran" style="--r:2deg">Sur Instagram : <span class="a-venir">Instagram à venir</span></span>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sable);color:var(--terracotta)"><path d="M0,60 C240,10 420,90 720,50 C1020,10 1200,80 1440,30 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="section fond-terracotta" id="aider" aria-labelledby="titre-aider">
+  <div class="conteneur duo">
+    <div>
+      <span class="surtitre">2. Aider</span>
+      <h2 id="titre-aider" data-split>Bénévole le jour J</h2>
+      <p>Le 8 février, on a besoin de bras pour que la fête soit belle. Écris-nous pour te proposer : <span class="a-venir">E-mail à venir</span></p>
+    </div>
+    <div>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem" data-cascade>
+        <span class="etiquette" style="--r:-4deg;font-size:1.3rem">Décoration</span>
+        <span class="etiquette etiquette--safran" style="--r:3deg;font-size:1.3rem">Accueil</span>
+        <span class="etiquette etiquette--olive" style="--r:-2deg;font-size:1.3rem">Rangement</span>
+      </div>
+      <p style="margin-top:2rem">La cuisine est réservée à l'équipe du Crous et aux chefs invités.</p>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--terracotta);color:var(--sable)"><path d="M0,30 C300,80 520,20 760,60 C1000,100 1240,10 1440,60 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="section" id="soutenir" aria-labelledby="titre-soutenir">
+  <div class="conteneur">
+    <span class="surtitre">3. Soutenir</span>
+    <h2 id="titre-soutenir" data-split>Soutiens le projet</h2>
+    <p>Les dons sont versés uniquement sur le compte bancaire de l'association.</p>
+    <div class="dons" data-cascade>
+      <div class="don">
+        <h3>Entreprises, associations, fondations</h3>
+        <p>Don par virement sur le compte de l'association. Nous vous remettons une <strong>attestation de don</strong>.</p>
+        <p><strong>Attention :</strong> l'association ne délivre pas de reçu fiscal.</p>
+        <p>Coordonnées bancaires : <span class="a-venir">à venir</span></p>
+      </div>
+      <div class="don">
+        <span class="gros">20 €</span>
+        <h3>maximum par particulier</h3>
+        <p>Les dons des particuliers sont limités à 20 € par personne, selon la règle de notre formation.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:4rem">À quoi sert l'argent ?</h3>
+    <ul class="usages" data-cascade>
+      <li class="etiquette" style="--r:-3deg">Le surcoût des produits</li>
+      <li class="etiquette etiquette--safran" style="--r:2deg">Les épices et produits spécifiques</li>
+      <li class="etiquette etiquette--olive" style="--r:-1deg">La décoration</li>
+      <li class="etiquette etiquette--terracotta" style="--r:3deg">L'impression des supports</li>
+      <li class="etiquette etiquette--figue" style="--r:-2deg">L'assurance</li>
+    </ul>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sable);color:var(--olive-nuit)"><path d="M0,40 C180,90 360,0 540,30 C720,60 900,100 1080,60 C1260,20 1350,40 1440,50 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="section fond-nuit" aria-labelledby="titre-transparence">
+  <div class="conteneur">
+    <span class="surtitre">Transparence</span>
+    <h2 id="titre-transparence" data-split>Chaque euro compte</h2>
+    <ul class="principes" data-cascade>
+  <li><strong>Bénévoles</strong>Tous les membres agissent bénévolement.</li>
+  <li><strong>Comptes votés</strong>Les comptes sont votés en assemblée générale.</li>
+  <li><strong>Dons tracés</strong>Les dons sont versés uniquement sur le compte bancaire de l'association.</li>
+  <li><strong>Dépenses justifiées</strong>Chaque dépense est justifiée.</li>
+  <li><strong>Partenaires respectés</strong>Aucun partenaire n'est cité sans son accord écrit.</li>
+</ul>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--olive-nuit);color:var(--sable)"><path d="M0,60 C240,10 420,90 720,50 C1020,10 1200,80 1440,30 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="section" aria-labelledby="titre-partenaires">
+  <div class="conteneur">
+    <span class="surtitre">Partenaires</span>
+    <h2 id="titre-partenaires" data-split>Votre place à table</h2>
+    <p>Aucun partenaire n'est confirmé pour l'instant. Aucun partenaire n'est cité sans son accord écrit.</p>
+    <div class="partenaires-vides" aria-hidden="true" data-cascade><span>Emplacement partenaire</span><span>Emplacement partenaire</span><span>Emplacement partenaire</span></div>
+    <p style="margin-top:2rem">Vous souhaitez soutenir le projet ? Écrivez-nous : <span class="a-venir">E-mail à venir</span></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied">
+  <svg class="pied-haut" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="--fond-avant:var(--sable)"><path d="M0,50 C200,0 420,90 720,45 C1000,5 1220,80 1440,35 L1440,100 L0,100Z" fill="currentColor"/></svg>
+  <div class="conteneur">
+    <div class="pied-contenu">
+      <div>
+        <h2>Le goût, l'amitié et <span class="accent">le partage.</span></h2>
+        <p><span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span>, association étudiante loi 1901 (en cours de création) pour la diversité culturelle et les échanges entre étudiants.</p>
+      </div>
+      <div>
+        <h3>Explorer</h3>
+        <ul>
+          <li><a href="evenement.html">Le repas du 8 février</a></li>
+          <li><a href="menu.html">Le menu</a></li>
+          <li><a href="participer.html">Participer et soutenir</a></li>
+          <li><a href="association.html">L'association</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Nous écrire</h3>
+        <ul>
+          <li><!-- Remplacer par <a href="mailto:...">...</a> --><span class="a-venir">E-mail à venir</span></li>
+          <li><!-- Remplacer par le lien Instagram --><span class="a-venir">Instagram à venir</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <p>© <span data-annee>2026</span> <span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span> · Site réalisé par Loïc KARRER</p>
+      <p><a href="mentions-legales.html">Mentions légales et confidentialité</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/vendor/gsap.min.js" defer></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

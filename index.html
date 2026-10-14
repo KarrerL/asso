@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accueil · Nom de l'association</title>
+<meta name="description" content="Repas du monde au Crous le lundi 8 février 2027 : 3 entrées, 3 plats, 3 desserts de cuisines différentes pour 1 €. Une association étudiante pour la diversité culturelle.">
+<meta name="theme-color" content="#f4eadb">
+<!-- À ajouter quand le logo existera : <link rel="icon" href="assets/img/logo/favicon.svg"> -->
+<link rel="stylesheet" href="assets/css/polices.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{if(sessionStorage.getItem("voile")==="1"&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("voile-entree")}catch(e){}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<div class="voile" aria-hidden="true"><span></span></div>
+
+<a class="logo-bulle" href="index.html" aria-label="Nom de l'association, accueil">
+  <!-- Emplacement du logo : remplacer ce bloc par <img src="assets/img/logo/logo.svg" alt=""> -->
+  <span class="logo-slot" aria-hidden="true">Logo</span>
+  <span class="logo-nom"><span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span></span>
+</a>
+
+<nav class="dock" aria-label="Navigation principale">
+  <a href="index.html" aria-current="page">Accueil</a><a href="evenement.html">L'événement</a><a href="menu.html">Le menu</a><a href="participer.html">Participer</a><a href="association.html">L'asso</a>
+  <a class="dock-date" href="evenement.html#infos">8.02.27</a>
+</nav>
+
+<button class="menu-bouton" type="button" aria-expanded="false" aria-controls="rideau" aria-label="Ouvrir le menu"><span></span><span></span></button>
+<nav class="rideau" id="rideau" aria-label="Navigation mobile">
+  <span class="forme" aria-hidden="true"></span><span class="forme" aria-hidden="true"></span>
+  <ul><li><a href="index.html" aria-current="page">Accueil</a></li><li><a href="evenement.html">L'événement</a></li><li><a href="menu.html">Le menu</a></li><li><a href="participer.html">Participer</a></li><li><a href="association.html">L'asso</a></li></ul>
+  <p class="rideau-info">Repas du monde · lundi 8 février 2027 · 11 h 30 – 14 h</p>
+</nav>
+
+<main id="contenu">
+
+<section class="scene" aria-labelledby="titre-site">
+  <div class="scene-fond" aria-hidden="true">
+    <span class="forme f1" data-profondeur="-0.4"></span>
+    <span class="forme f2" data-profondeur="-0.6"></span>
+    <span class="forme f3" data-profondeur="0.8"></span>
+  </div>
+
+  <div class="plateau" data-profondeur="0.25">
+    <svg class="plateau-anneau" viewBox="0 0 500 500" aria-hidden="true"><defs><path id="anneau-plateau" d="M250,250 m-232,0 a232,232 0 1,1 464,0 a232,232 0 1,1 -464,0"/></defs>
+      <text><textPath href="#anneau-plateau" textLength="1440" lengthAdjust="spacing">le goût ✺ l'amitié ✺ le partage ✺ repas du monde ✺ 8 février 2027 ✺</textPath></text></svg>
+    <div class="plateau-assiette" aria-hidden="true"></div>
+    <div class="plateau-galets" aria-hidden="true"><span class="galet" style="left:41.5%;top:8.5%;--c:var(--olive);--t:17%;--d:9s"></span><span class="galet" style="left:62.7%;top:16.2%;--c:var(--terracotta);--t:15%;--d:10s"></span><span class="galet" style="left:74%;top:35.8%;--c:var(--figue);--t:16%;--d:11s"></span><span class="galet" style="left:70.1%;top:58%;--c:var(--olive);--t:15%;--d:12s"></span><span class="galet" style="left:52.8%;top:72.5%;--c:var(--terracotta);--t:17%;--d:13s"></span><span class="galet" style="left:30.2%;top:72.5%;--c:var(--figue);--t:15%;--d:14s"></span><span class="galet" style="left:12.9%;top:58%;--c:var(--olive);--t:16%;--d:15s"></span><span class="galet" style="left:9%;top:35.8%;--c:var(--terracotta);--t:15%;--d:16s"></span><span class="galet" style="left:20.3%;top:16.2%;--c:var(--figue);--t:16%;--d:17s"></span></div>
+    <p class="prix-piece"><span><b>1 €</b><small>le repas<br>complet</small></span></p>
+  </div>
+
+  <div class="scene-etiquettes">
+    <span class="etiquette e1" data-profondeur="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Lundi 8 février 2027</span>
+    <span class="etiquette etiquette--safran e2" data-profondeur="0.7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 h 30 – 14 h</span>
+    <span class="etiquette etiquette--olive e3" data-profondeur="1.2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Resto U Crous de l'IUT</span>
+    <span class="etiquette etiquette--figue e4" data-profondeur="0.9">Sans réservation</span>
+  </div>
+
+  <h1 class="scene-h1" id="titre-site"><strong><span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span></strong>Repas du monde au Crous de l'<span data-iut>IUT Nice Côte d'Azur</span> : 3 entrées, 3 plats, 3 desserts de cuisines différentes, pour 1 €.</h1>
+
+</section>
+
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sable);color:var(--lin)"><path d="M0,40 C180,90 360,0 540,30 C720,60 900,100 1080,60 C1260,20 1350,40 1440,50 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="compose" id="compose" data-compose aria-labelledby="titre-compose">
+  <div class="compose-piste">
+    <div class="compose-panneau">
+      <span class="surtitre">Comment ça marche</span>
+      <h2 id="titre-compose" data-split>Compose ton plateau</h2>
+      <p>Le 8 février, 9 propositions t'attendent : 3 entrées, 3 plats et 3 desserts, chacun d'une cuisine différente. Tu prends une entrée, un plat et un dessert.</p>
+      <p>Cuisiné par l'équipe du restaurant universitaire, avec un ou plusieurs chefs de restaurants du monde de Nice. Essaie ici avec nos premières idées de plats (rien d'officiel) : le menu définitif sera dévoilé mi-janvier 2027.</p>
+    </div>
+    <div class="compose-panneau" style="--c:var(--olive)">
+      <span class="numero" aria-hidden="true">1</span>
+      <h2>Une entrée</h2>
+      <fieldset class="choix choix--entree">
+      <legend>Choisis ton entrée</legend>
+      <input type="radio" name="entree" id="entree-mercimek-koftesi" value="mercimek-koftesi" data-drapeau="tr"><label for="entree-mercimek-koftesi"><span class="choix-visuel"><span class="choix-photo"><img src="assets/img/menu/mercimek-koftesi.jpg" alt="" loading="lazy"></span><img class="choix-drapeau" src="assets/img/drapeaux/tr.svg" alt="" width="32" height="32"></span><span class="choix-nom">Mercimek köftesi</span><small>Turquie</small></label><input type="radio" name="entree" id="entree-zaalouk" value="zaalouk" data-drapeau="ma"><label for="entree-zaalouk"><span class="choix-visuel"><span class="choix-photo"><img src="assets/img/menu/zaalouk.jpg" alt="" loading="lazy"></span><img class="choix-drapeau" src="assets/img/drapeaux/ma.svg" alt="" width="32" height="32"></span><span class="choix-nom">Zaalouk</span><small>Maroc</small></label><input type="radio" name="entree" id="entree-bolinho-de-arroz" value="bolinho-de-arroz" data-drapeau="br"><label for="entree-bolinho-de-arroz"><span class="choix-visuel"><span class="choix-photo"><img src="assets/img/menu/bolinho-de-arroz.jpg" alt="" loading="lazy"></span><img class="choix-drapeau" src="assets/img/drapeaux/br.svg" alt="" width="32" height="32"></span><span class="choix-nom">Bolinho de arroz</span><small>Brésil</small></label></fieldset>
+    </div>
+    <div class="compose-panneau" style="--c:var(--terracotta)">
+      <span class="numero" aria-hidden="true">2</span>
+      <h2>Un plat</h2>
+      <p>Au moins un des plats principaux sera végétarien.</p>
+      <fieldset class="choix choix--plat">
+      <legend>Choisis ton plat</legend>
+      <input type="radio" name="plat" id="plat-thiebou-niebe" value="thiebou-niebe" data-drapeau="sn"><label for="plat-thiebou-niebe"><span class="choix-visuel"><span class="choix-photo"><img src="assets/img/menu/thiebou-niebe.jpg" alt="" loading="lazy"></span><img class="choix-drapeau" src="assets/img/drapeaux/sn.svg" alt="" width="32" height="32"></span><span class="choix-nom">Thiébou niébé</span><small>Sénégal</small></label><input type="radio" name="plat" id="plat-plov" value="plov" data-drapeau="uz"><label for="plat-plov"><span class="choix-visuel"><span class="choix-photo"><img src="assets/img/menu/plov.jpg" alt="" loading="lazy"></span><img class="choix-drapeau" src="assets/img/drapeaux/uz.svg" alt="" width="32" height="32"></span><span class="choix-nom">Plov</span><small>Ouzbékistan</small></label><input type="radio" name="plat" id="plat-bolani" value="bolani" data-drapeau="af"><label for="plat-bolani"><span class="choix-visuel"><span class="choix-photo"><img src="assets/img/menu/bolani.jpg" alt="" loading="lazy"></span><img class="choix-drapeau" src="assets/img/drapeaux/af.svg" alt="" width="32" height="32"></span><span class="choix-nom">Bolani</span><small>Afghanistan</small></label></fieldset>
+    </div>
+    <div class="compose-panneau" style="--c:var(--figue)">
+      <span class="numero" aria-hidden="true">3</span>
+      <h2>Un dessert</h2>
+      <fieldset class="choix choix--dessert">
+      <legend>Choisis ton dessert</legend>
+      <input type="radio" name="dessert" id="dessert-malva-pudding" value="malva-pudding" data-drapeau="za"><label for="dessert-malva-pudding"><span class="choix-visuel"><span class="choix-photo"><img src="assets/img/menu/malva-pudding.jpg" alt="" loading="lazy"></span><img class="choix-drapeau" src="assets/img/drapeaux/za.svg" alt="" width="32" height="32"></span><span class="choix-nom">Malva pudding</span><small>Afrique du Sud</small></label><input type="radio" name="dessert" id="dessert-suji-halwa" value="suji-halwa" data-drapeau="in"><label for="dessert-suji-halwa"><span class="choix-visuel"><span class="choix-photo"><img src="assets/img/menu/suji-halwa.jpg" alt="" loading="lazy"></span><img class="choix-drapeau" src="assets/img/drapeaux/in.svg" alt="" width="32" height="32"></span><span class="choix-nom">Suji halwa</span><small>Inde</small></label><input type="radio" name="dessert" id="dessert-peach-cobbler" value="peach-cobbler" data-drapeau="us"><label for="dessert-peach-cobbler"><span class="choix-visuel"><span class="choix-photo"><img src="assets/img/menu/peach-cobbler.jpg" alt="" loading="lazy"></span><img class="choix-drapeau" src="assets/img/drapeaux/us.svg" alt="" width="32" height="32"></span><span class="choix-nom">Peach cobbler</span><small>États-Unis</small></label></fieldset>
+    </div>
+    <div class="compose-panneau">
+      <span class="total">1 €</span>
+      <h2>le repas complet</h2>
+      <p data-statut aria-live="polite"></p>
+      <a class="bouton" href="menu.html">Découvrir le menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+  <svg class="mini-plateau" viewBox="0 0 200 140" role="img" aria-label="Ton plateau : entrée, plat, dessert">
+    <rect x="4" y="4" width="192" height="132" rx="30" style="fill:var(--argile)"/>
+    <circle class="case" data-case="entree" cx="44" cy="46" r="30"/>
+    <circle class="case" data-case="dessert" cx="156" cy="46" r="30"/>
+    <circle class="case" data-case="plat" cx="100" cy="98" r="30"/>
+    <defs>
+      <clipPath id="mp-entree"><circle cx="44" cy="46" r="25"/></clipPath>
+      <clipPath id="mp-dessert"><circle cx="156" cy="46" r="25"/></clipPath>
+      <clipPath id="mp-plat"><circle cx="100" cy="98" r="25"/></clipPath>
+    </defs>
+    <image class="mp-drapeau" data-drapeau-case="entree" x="19" y="21" width="50" height="50" clip-path="url(#mp-entree)"/>
+    <image class="mp-drapeau" data-drapeau-case="dessert" x="131" y="21" width="50" height="50" clip-path="url(#mp-dessert)"/>
+    <image class="mp-drapeau" data-drapeau-case="plat" x="75" y="73" width="50" height="50" clip-path="url(#mp-plat)"/>
+  </svg>
+</section>
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--lin);color:var(--sable)"><path d="M0,60 C240,10 420,90 720,50 C1020,10 1200,80 1440,30 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="section" aria-labelledby="titre-rdv">
+  <div class="conteneur rebours">
+    <div class="rebours-blob" data-rebours="2027-02-08T11:30:00+01:00" data-reveal>
+      <div>
+        <span class="jours" data-j>—</span>
+        <span class="unite" data-unite>jours avant le repas</span>
+        <div class="rebours-details" aria-hidden="true">
+          <span><b data-h>--</b><small>h</small></span>
+          <span><b data-m>--</b><small>min</small></span>
+          <span><b data-s>--</b><small>s</small></span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="surtitre">Note la date</span>
+      <h2 id="titre-rdv" data-split>Rendez-vous au resto U</h2>
+      <ul class="infos-pratiques" data-cascade>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span><strong>Lundi 8 février 2027</strong>de 11 h 30 à 14 h</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>Restaurant universitaire Crous de l'<span data-iut>IUT Nice Côte d'Azur</span></strong>41 boulevard Napoléon III, 06200 Nice</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 6h11l3 3-3 3H5z"/></svg><span><strong>Arrêt Constellations / IUT</strong></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M4 14h9"/><path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2"/></svg><span><strong>1 € le repas complet</strong>entrée, plat et dessert</span></li>
+      </ul>
+      <a class="bouton" href="evenement.html#infos">Infos pratiques et plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sable);color:var(--lin)"><path d="M0,30 C300,80 520,20 760,60 C1000,100 1240,10 1440,60 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="section fond-lin" aria-labelledby="titre-qui">
+  <div class="conteneur">
+    <span class="surtitre">Qui peut venir ?</span>
+    <h2 id="titre-qui" data-split>Pas besoin de réserver</h2>
+    <div class="bulles" data-cascade>
+  <div class="bulle bulle--oui">
+    <h3>Étudiants et personnels de l'IUT</h3>
+    <p>Viens directement entre 11 h 30 et 14 h. Pas de réservation, pas d'inscription.</p>
+  </div>
+  <div class="bulle bulle--sur-demande">
+    <h3>Partenaires, donateurs, professionnels liés au Crous ou à l'IUT</h3>
+    <p>Vous pouvez réserver, sur demande, en nous écrivant : <span class="a-venir">E-mail à venir</span></p>
+  </div>
+  <div class="bulle bulle--non">
+    <h3>Personnes extérieures</h3>
+    <p>Le repas est réservé aux étudiants et aux personnels de l'IUT : les personnes extérieures ne peuvent pas venir.</p>
+  </div>
+</div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--lin);color:var(--sable)"><path d="M0,40 C180,90 360,0 540,30 C720,60 900,100 1080,60 C1260,20 1350,40 1440,50 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="section" aria-labelledby="titre-sur-place">
+  <div class="conteneur">
+    <p class="valeurs" aria-label="Le goût, l'amitié et le partage"><span class="v1">le goût,</span> <span class="v2">l'amitié</span> <span class="et">et</span> <span class="v3">le partage</span></p>
+  </div>
+  <div class="conteneur" style="margin-top:clamp(4rem,10vw,8rem)">
+    <span class="surtitre">Sur place</span>
+    <h2 id="titre-sur-place" data-split>Bien manger, en confiance</h2>
+    <div class="engagements" data-cascade>
+  <div class="engagement"><span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h3>Allergènes affichés</h3><p>Pour chaque plat, les 14 allergènes réglementaires sont indiqués.</p></div>
+  <div class="engagement"><span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span><h3>Origine des viandes</h3><p>L'origine des viandes est indiquée sur place.</p></div>
+  <div class="engagement"><span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></span><h3>Option végétarienne</h3><p>Au moins un des plats principaux est végétarien.</p></div>
+  <div class="engagement"><span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span><h3>Photos avec accord</h3><p>Les photos sont prises uniquement avec le consentement des personnes.</p></div>
+</div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="titre-chemin">
+  <div class="conteneur">
+    <span class="surtitre">Le projet pas à pas</span>
+    <h2 id="titre-chemin" data-split>De l'idée au plateau</h2>
+    <div class="chemin" data-chemin><svg class="chemin-trace" aria-hidden="true"><path/><path class="trait"/></svg><ol><li><span class="rond" aria-hidden="true">1</span><time>16 octobre 2026</time><h3>Assemblée générale constitutive</h3><p>Les membres fondent l'association.</p></li><li><span class="rond" aria-hidden="true">2</span><time>Fin octobre 2026</time><h3>Déclaration en préfecture</h3><p>L'association est déclarée.</p></li><li><span class="rond" aria-hidden="true">3</span><time>Novembre 2026</time><h3>Sondage sur les cuisines</h3><p>Les étudiants votent pour les cuisines du repas.</p></li><li><span class="rond" aria-hidden="true">4</span><time>Début décembre 2026</time><h3>Convention avec le Crous</h3><p>Le cadre du repas est fixé avec le Crous.</p></li><li><span class="rond" aria-hidden="true">5</span><time>Mi-janvier 2027</time><h3>Menu définitif</h3><p>Publication du menu et des fiches allergènes.</p></li><li class="temps-fort"><span class="rond" aria-hidden="true">6</span><time>Lundi 8 février 2027</time><h3>Le repas du monde</h3><p>De 11 h 30 à 14 h, au restaurant universitaire.</p></li><li><span class="rond" aria-hidden="true">7</span><time>Mars 2027</time><h3>Bilan</h3><p>Résultats du questionnaire et assemblée générale.</p></li></ol></div><p style="margin-top:2.5rem;color:var(--encre-douce)">Dates prévisionnelles, susceptibles d'évoluer.</p>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sable);color:var(--lin)"><path d="M0,60 C240,10 420,90 720,50 C1020,10 1200,80 1440,30 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="section fond-lin" aria-labelledby="titre-portes">
+  <div class="conteneur">
+    <span class="surtitre">Envie d'en être ?</span>
+    <h2 id="titre-portes" data-split>Mets la main à la pâte</h2>
+    <div class="portes" data-cascade>
+      <a class="porte" href="participer.html#proposer"><svg class=fleche viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><h3>Proposer une cuisine</h3><p>Une recette de chez toi ? Fais-la connaître via le sondage.</p></a>
+      <a class="porte" href="participer.html#aider"><svg class=fleche viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><h3>Aider le jour J</h3><p>Décoration, accueil, rangement : rejoins les bénévoles.</p></a>
+      <a class="porte" href="participer.html#soutenir"><svg class=fleche viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><h3>Soutenir le projet</h3><p>Entreprises, associations, particuliers : chaque don compte.</p></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied">
+  <svg class="pied-haut" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="--fond-avant:var(--lin)"><path d="M0,50 C200,0 420,90 720,45 C1000,5 1220,80 1440,35 L1440,100 L0,100Z" fill="currentColor"/></svg>
+  <div class="conteneur">
+    <div class="pied-contenu">
+      <div>
+        <h2>Le goût, l'amitié et <span class="accent">le partage.</span></h2>
+        <p><span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span>, association étudiante loi 1901 (en cours de création) pour la diversité culturelle et les échanges entre étudiants.</p>
+      </div>
+      <div>
+        <h3>Explorer</h3>
+        <ul>
+          <li><a href="evenement.html">Le repas du 8 février</a></li>
+          <li><a href="menu.html">Le menu</a></li>
+          <li><a href="participer.html">Participer et soutenir</a></li>
+          <li><a href="association.html">L'association</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Nous écrire</h3>
+        <ul>
+          <li><!-- Remplacer par <a href="mailto:...">...</a> --><span class="a-venir">E-mail à venir</span></li>
+          <li><!-- Remplacer par le lien Instagram --><span class="a-venir">Instagram à venir</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <p>© <span data-annee>2026</span> <span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span> · Site réalisé par Loïc KARRER</p>
+      <p><a href="mentions-legales.html">Mentions légales et confidentialité</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/vendor/gsap.min.js" defer></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

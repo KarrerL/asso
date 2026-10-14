@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le menu · Nom de l'association</title>
+<meta name="description" content="Le menu du repas du monde : choisi par sondage auprès des étudiants, publié mi-janvier 2027 avec les allergènes de chaque plat.">
+<meta name="theme-color" content="#f4eadb">
+<!-- À ajouter quand le logo existera : <link rel="icon" href="assets/img/logo/favicon.svg"> -->
+<link rel="stylesheet" href="assets/css/polices.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{if(sessionStorage.getItem("voile")==="1"&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("voile-entree")}catch(e){}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<div class="voile" aria-hidden="true"><span></span></div>
+
+<a class="logo-bulle" href="index.html" aria-label="Nom de l'association, accueil">
+  <!-- Emplacement du logo : remplacer ce bloc par <img src="assets/img/logo/logo.svg" alt=""> -->
+  <span class="logo-slot" aria-hidden="true">Logo</span>
+  <span class="logo-nom"><span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span></span>
+</a>
+
+<nav class="dock" aria-label="Navigation principale">
+  <a href="index.html">Accueil</a><a href="evenement.html">L'événement</a><a href="menu.html" aria-current="page">Le menu</a><a href="participer.html">Participer</a><a href="association.html">L'asso</a>
+  <a class="dock-date" href="evenement.html#infos">8.02.27</a>
+</nav>
+
+<button class="menu-bouton" type="button" aria-expanded="false" aria-controls="rideau" aria-label="Ouvrir le menu"><span></span><span></span></button>
+<nav class="rideau" id="rideau" aria-label="Navigation mobile">
+  <span class="forme" aria-hidden="true"></span><span class="forme" aria-hidden="true"></span>
+  <ul><li><a href="index.html">Accueil</a></li><li><a href="evenement.html">L'événement</a></li><li><a href="menu.html" aria-current="page">Le menu</a></li><li><a href="participer.html">Participer</a></li><li><a href="association.html">L'asso</a></li></ul>
+  <p class="rideau-info">Repas du monde · lundi 8 février 2027 · 11 h 30 – 14 h</p>
+</nav>
+
+<main id="contenu">
+<header class="intro">
+  <div>
+    <span class="surtitre" data-reveal><span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span></span>
+    <h1 data-split>Le menu se décide avec toi</h1>
+    <p data-reveal>Le menu n'est pas encore fixé. Voici nos premières idées de plats, rien n'est officiel : le menu définitif sera choisi grâce à un sondage auprès des étudiants en novembre 2026, puis validé avec le Crous et les chefs.</p>
+    
+  </div>
+  <div class="intro-visuel" style="--c:var(--safran-clair);--c2:var(--terracotta)" aria-hidden="true">
+    <span class="forme" data-flotte="-12"></span><span class="forme"></span>
+    <svg class="anneau" viewBox="0 0 300 300" aria-hidden="true"><defs><path id="anneau-menu" d="M150.0,150.0 m-140,0 a140,140 0 1,1 280,0 a140,140 0 1,1 -280,0"/></defs><text><textPath href="#anneau-menu" textLength="872" lengthAdjust="spacing">entrées ✺ plats ✺ desserts ✺ cuisines du monde ✺ </textPath></text></svg>
+    <span class="centre">3×3</span>
+  </div>
+</header>
+<section class="section" style="padding-top:1rem" aria-label="État du menu">
+  <div class="conteneur">
+    <div class="statut-menu" data-reveal>
+      <span class="a-venir">Premières idées, rien d'officiel</span>
+      <span><strong>Sondage :</strong> novembre 2026</span>
+      <span><strong>Menu et allergènes :</strong> mi-janvier 2027</span>
+    </div>
+    <div style="margin-top:1.5rem">
+      <!-- Remplacer par <a class="bouton" href="LIEN_DU_SONDAGE" target="_blank" rel="noopener">Répondre au sondage</a> -->
+      <span class="bouton" aria-disabled="true">Lien du sondage à venir</span>
+    </div>
+
+    <div id="carte">
+      <noscript><p>Le détail des plats s'affiche avec JavaScript. Premières idées, rien d'officiel : Mercimek köftesi, Zaalouk, Bolinho de arroz (entrées) ; Thiébou niébé, Plov, Bolani (plats) ; Malva pudding, Suji halwa, Peach cobbler (desserts). Le menu définitif : nom, pays, présentation, ingrédients, allergènes, mentions végan, végétarien, sans gluten et photo de chaque plat seront publiés mi-janvier 2027.</p></noscript>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sable);color:var(--lin)"><path d="M0,40 C180,90 360,0 540,30 C720,60 900,100 1080,60 C1260,20 1350,40 1440,50 L1440,100 L0,100Z" fill="currentColor"/></svg>
+
+<section class="section fond-lin" aria-labelledby="titre-allergenes">
+  <div class="conteneur">
+    <span class="surtitre">Pour manger sereinement</span>
+    <h2 id="titre-allergenes" data-split>Les 14 allergènes réglementaires</h2>
+    <p>Pour chaque plat, nous indiquerons la présence de ces allergènes. Sur place, ils seront affichés à côté de chaque plat, avec l'origine des viandes.</p>
+    <ol class="allergenes" data-cascade>
+      <li><span class="num">1</span>Céréales contenant du gluten</li><li><span class="num">2</span>Crustacés</li><li><span class="num">3</span>Œufs</li><li><span class="num">4</span>Poissons</li><li><span class="num">5</span>Arachides</li><li><span class="num">6</span>Soja</li><li><span class="num">7</span>Lait</li><li><span class="num">8</span>Fruits à coque</li><li><span class="num">9</span>Céleri</li><li><span class="num">10</span>Moutarde</li><li><span class="num">11</span>Graines de sésame</li><li><span class="num">12</span>Anhydride sulfureux et sulfites</li><li><span class="num">13</span>Lupin</li><li><span class="num">14</span>Mollusques</li>
+    </ol>
+    <div class="note" style="margin-top:3rem" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg><p>Chaque plat portera les mentions <strong>végan</strong>, <strong>végétarien</strong> et <strong>sans gluten</strong> quand elles s'appliquent. Au moins un des plats principaux sera végétarien.</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied">
+  <svg class="pied-haut" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" style="--fond-avant:var(--lin)"><path d="M0,50 C200,0 420,90 720,45 C1000,5 1220,80 1440,35 L1440,100 L0,100Z" fill="currentColor"/></svg>
+  <div class="conteneur">
+    <div class="pied-contenu">
+      <div>
+        <h2>Le goût, l'amitié et <span class="accent">le partage.</span></h2>
+        <p><span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span>, association étudiante loi 1901 (en cours de création) pour la diversité culturelle et les échanges entre étudiants.</p>
+      </div>
+      <div>
+        <h3>Explorer</h3>
+        <ul>
+          <li><a href="evenement.html">Le repas du 8 février</a></li>
+          <li><a href="menu.html">Le menu</a></li>
+          <li><a href="participer.html">Participer et soutenir</a></li>
+          <li><a href="association.html">L'association</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Nous écrire</h3>
+        <ul>
+          <li><!-- Remplacer par <a href="mailto:...">...</a> --><span class="a-venir">E-mail à venir</span></li>
+          <li><!-- Remplacer par le lien Instagram --><span class="a-venir">Instagram à venir</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <p>© <span data-annee>2026</span> <span class="tbd" title="À remplacer : nom de l'association">Nom de l'association</span> · Site réalisé par Loïc KARRER</p>
+      <p><a href="mentions-legales.html">Mentions légales et confidentialité</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/vendor/gsap.min.js" defer></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/menu-data.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
