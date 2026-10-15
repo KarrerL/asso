@@ -27,7 +27,7 @@
   /* Typo */
   --f-display: "Telma", "Trebuchet MS", sans-serif;
   --f-texte: "Supreme", "Segoe UI", sans-serif;
-  --f-accent: "Gambarino", Georgia, serif;
+  --f-accent: var(--f-texte); /* étiquettes : capitales espacées */
 
   --fs-mega: clamp(3.4rem, 11vw, 10rem);
   --fs-1: clamp(2.6rem, 6.4vw, 5.6rem);
@@ -118,7 +118,7 @@ ul { padding-left: 1.2em; }
 .section { position: relative; padding-block: clamp(4rem, 10vw, 8rem); }
 
 /* Mots-accents en Gambarino */
-.accent { font-family: var(--f-accent); font-weight: 400; font-style: normal; letter-spacing: 0; }
+.accent { color: var(--safran); }
 .surligne {
   background: linear-gradient(transparent 62%, var(--safran-clair) 62% 90%, transparent 90%);
   padding-inline: 0.08em;
@@ -405,6 +405,9 @@ ul { padding-left: 1.2em; }
 @media (max-width: 1180px) {
   .scene { padding-top: 6.5rem; align-content: start; min-height: 0; padding-bottom: 5rem; }
   .plateau { width: min(78vw, 34rem, 58svh); }
+}
+@media (max-width: 560px) {
+  .plateau { width: min(70vw, 58svh); }
   .scene-etiquettes { position: relative; inset: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; margin-top: 2.2rem; }
   .scene-etiquettes .etiquette { position: static; }
   .scene-h1 { position: static; margin-top: 2rem; text-align: center; max-width: none; }
@@ -614,19 +617,26 @@ ul { padding-left: 1.2em; }
   position: relative;
   display: flex; flex-direction: column; justify-content: flex-end;
   min-height: 22rem;
-  padding: 2rem;
-  border-radius: 12rem 12rem 2rem 2rem;
-  background: var(--c); color: var(--lin);
+  padding: 2rem 5rem 2rem 2rem;
+  color: var(--lin);
   text-decoration: none;
-  overflow: hidden;
-  transition: border-radius 0.7s var(--ease), translate 0.5s var(--ease);
+  isolation: isolate;
+  transition: translate 0.5s var(--ease);
 }
+/* La forme (arche) vit sur un calque : elle peut changer sans jamais couper le texte */
+.porte::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: var(--c);
+  border-radius: 50% 50% 2rem 2rem / 9rem 9rem 2rem 2rem;
+  transition: border-radius 0.7s var(--ease);
+}
+.porte:hover::before { border-radius: 2.4rem 50% 2rem 2rem / 2.4rem 9rem 2rem 2rem; }
 .porte:nth-child(2) { --c: var(--terracotta-fond); margin-top: 3rem; }
 .porte:nth-child(3) { --c: var(--figue); }
-.porte:hover { color: var(--lin); border-radius: 2rem 2rem 12rem 12rem; translate: 0 -0.4rem; }
+.porte:hover { color: var(--lin); translate: 0 -0.4rem; }
 .porte h3 { font-size: var(--fs-3); }
 .porte p { margin: 0; opacity: 0.92; }
-.porte .fleche { position: absolute; top: 2rem; right: 2rem; width: 2.6rem; height: 2.6rem; transition: rotate 0.5s var(--ease); }
+.porte .fleche { position: absolute; bottom: 2rem; right: 1.8rem; width: 2.4rem; height: 2.4rem; transition: rotate 0.5s var(--ease); }
 .porte:hover .fleche { rotate: -45deg; }
 @media (max-width: 760px) { .portes { grid-template-columns: 1fr; } .porte:nth-child(2) { margin-top: 0; } .porte { min-height: 15rem; } }
 
@@ -871,12 +881,12 @@ ul { padding-left: 1.2em; }
 }
 
 /* ---------- Association / bureau ---------- */
-.valeurs { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.2em 0.5em; font-family: var(--f-display); font-weight: 900; font-size: var(--fs-mega); line-height: 0.95; text-align: center; }
+.valeurs { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 0.2em 0.5em; font-family: var(--f-display); font-weight: 900; font-size: var(--fs-mega); line-height: 0.95; text-align: center; }
 .valeurs span { display: inline-block; }
 .valeurs .v1 { color: var(--terracotta); }
 .valeurs .v2 { color: var(--olive); }
 .valeurs .v3 { color: var(--figue); }
-.valeurs .et { font-family: var(--f-accent); font-weight: 400; font-size: 0.45em; color: var(--encre-douce); }
+.valeurs .et { font-size: 0.55em; color: var(--encre); }
 
 .bureau { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.4rem, 3vw, 2.4rem); margin-top: 3rem; }
 @media (max-width: 960px) { .bureau { grid-template-columns: repeat(2, 1fr); } }
@@ -892,8 +902,9 @@ ul { padding-left: 1.2em; }
   display: grid; place-items: center;
   margin-bottom: 1.1rem;
   transition: border-radius 1s var(--ease);
+  -webkit-mask-image: -webkit-radial-gradient(white, black); /* force la découpe arrondie sur Safari */
+  transform: translateZ(0);
 }
-.membre:hover .portrait { border-radius: var(--blob-3); }
 .membre:nth-child(2) .portrait { --c: var(--terracotta); animation-delay: -4s; }
 .membre:nth-child(3) .portrait { --c: var(--figue); animation-delay: -8s; }
 .membre:nth-child(4) .portrait { --c: var(--safran); animation-delay: -11s; }
@@ -911,9 +922,12 @@ ul { padding-left: 1.2em; }
   mix-blend-mode: color; opacity: 0.6;
   transition: opacity 0.6s var(--ease);
 }
-.membre:hover .portrait img { filter: none; }
-.membre:hover .portrait::after { opacity: 0; }
-.membre:hover .portrait img { scale: 1.06; }
+/* Effets de survol : uniquement à la souris (au doigt, ils restaient « collés ») */
+@media (hover: hover) {
+  .membre:hover .portrait { border-radius: var(--blob-3); }
+  .membre:hover .portrait img { filter: none; scale: 1.06; }
+  .membre:hover .portrait::after { opacity: 0; }
+}
 /* Illustration (pas une photo) : couleurs d'origine, sans teinte */
 .membre .role { font-family: var(--f-accent); color: var(--terracotta-texte); font-size: 1.15rem; display: block; }
 .membre h3 { font-size: 1.4rem; margin: 0.1em 0 0.3em; }
@@ -1125,3 +1139,29 @@ html, body { overflow-x: hidden; overflow-x: clip; }
    (sinon liseré coloré sur le bord) et découpe stable pendant les animations */
 .portrait, .plat-photo, .choix-photo { isolation: isolate; }
 .portrait:has(img), .plat-photo:has(img), .choix-photo { background: none; }
+
+/* Étiquettes (surtitres, rôles, pays…) : capitales espacées dans la police du texte */
+.surtitre, .rebours-blob .unite, .chemin time, .ticket dt, .service-titre .compte, .plat-pays, .membre .role {
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.82rem;
+}
+.surtitre { font-size: 0.9rem; }
+.rebours-blob .unite { font-size: clamp(0.8rem, 1.6vw, 1rem); }
+
+/* ---------- Boutique ---------- */
+.produits { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: clamp(1.4rem, 3vw, 2.2rem); margin-top: 2.5rem; }
+.produit { display: flex; flex-direction: column; background: var(--lin); border-radius: 2rem; overflow: hidden; box-shadow: var(--ombre); transition: translate 0.5s var(--ease); }
+.produit:nth-child(3n+2) { rotate: 0.6deg; } .produit:nth-child(3n) { rotate: -0.6deg; }
+.produit-image img { width: 100%; height: auto; aspect-ratio: 1; transition: scale 0.8s var(--ease); }
+.produit-texte { padding: 1.3rem 1.5rem 1.6rem; display: flex; flex-direction: column; gap: 0.2rem; flex: 1; }
+.produit h3 { font-size: var(--fs-3); margin: 0; }
+.produit p { margin: 0; color: var(--encre-douce); }
+.produit-prix { margin-top: auto !important; padding-top: 0.9rem; display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap; }
+.produit .prix { font-family: var(--f-display); font-weight: 900; font-size: 2rem; color: var(--terracotta-texte); line-height: 1; }
+@media (hover: hover) {
+  .produit:hover { translate: 0 -0.4rem; }
+  .produit:hover .produit-image img { scale: 1.05; }
+}
+.etapes-boutique { margin: 2rem 0 0; padding: 0; list-style: none; counter-reset: e; display: grid; gap: 1rem; max-width: 46rem; }
+.etapes-boutique li { counter-increment: e; position: relative; padding: 1.1rem 1.3rem 1.1rem 4rem; border-radius: 1.4rem; background: rgb(252 245 233 / 0.1); }
+.etapes-boutique li::before { content: counter(e); position: absolute; left: 1.1rem; top: 50%; translate: 0 -50%; width: 2.2rem; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; background: var(--safran); color: var(--encre); font-weight: 800; }
+@media (min-width: 900px) { .produits { grid-template-columns: repeat(3, 1fr); } }
