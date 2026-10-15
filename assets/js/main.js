@@ -394,7 +394,7 @@
 
   /* ---------- Boutons aimantés ---------- */
   if (window.matchMedia("(hover: hover)").matches) {
-    document.querySelectorAll(".bouton, .porte .fleche").forEach((el) => {
+    document.querySelectorAll(".bouton").forEach((el) => {
       const x = G.quickTo(el, "x", { duration: 0.5, ease: "power3" });
       const y = G.quickTo(el, "y", { duration: 0.5, ease: "power3" });
       const cible = el.closest(".porte") || el;
