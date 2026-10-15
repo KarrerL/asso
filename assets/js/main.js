@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Nom de l'association — interactions et animations
+   PANGEA — interactions et animations
    Tout le contenu reste lisible sans JavaScript : les animations ne font
    que l'accompagner. Les préférences « mouvement réduit » sont respectées.
    ========================================================================== */
@@ -506,9 +506,9 @@ function echecCarte(el) {
 }
 
 const COULEURS_CARTE = {
-  fond: "#f4eadb", residentiel: "#efe3cf", parc: "#cdd2a4", eau: "#d6dcc6",
-  batiment: "#e4cfae", rueMineure: "#fbf6ee", rueMajeure: "#fbf6ee", bordure: "#e2cfb2",
-  autoroute: "#f2d49b", bordureAutoroute: "#e7a787", rail: "#b9c08f", texte: "#5c5243", halo: "#f4eadb",
+  fond: "#f8e9cf", residentiel: "#f1e0c4", parc: "#cdd0b4", eau: "#dadcc4",
+  batiment: "#e8d5b5", rueMineure: "#fcf5e9", rueMajeure: "#fcf5e9", bordure: "#e8d8c0",
+  autoroute: "#f5d496", bordureAutoroute: "#e4a788", rail: "#bdbe9b", texte: "#766357", halo: "#f8e9cf",
 };
 
 function recolorerStyle(style) {
