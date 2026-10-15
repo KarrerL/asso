@@ -886,7 +886,8 @@ ul { padding-left: 1.2em; }
 .valeurs .v1 { color: var(--terracotta); }
 .valeurs .v2 { color: var(--olive); }
 .valeurs .v3 { color: var(--figue); }
-.valeurs .et { font-size: 0.55em; color: var(--encre); }
+.valeurs .et { color: var(--encre); }
+.valeurs .v2 + .et { margin-left: -0.15em; }
 
 .bureau { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.4rem, 3vw, 2.4rem); margin-top: 3rem; }
 @media (max-width: 960px) { .bureau { grid-template-columns: repeat(2, 1fr); } }
@@ -1165,3 +1166,6 @@ html, body { overflow-x: hidden; overflow-x: clip; }
 .etapes-boutique li { counter-increment: e; position: relative; padding: 1.1rem 1.3rem 1.1rem 4rem; border-radius: 1.4rem; background: rgb(252 245 233 / 0.1); }
 .etapes-boutique li::before { content: counter(e); position: absolute; left: 1.1rem; top: 50%; translate: 0 -50%; width: 2.2rem; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; background: var(--safran); color: var(--encre); font-weight: 800; }
 @media (min-width: 900px) { .produits { grid-template-columns: repeat(3, 1fr); } }
+/* Textes en cercle : les lettres dépassent du cadre du SVG, on ne les coupe pas */
+.anneau, .plateau-anneau { overflow: visible; }
+.produit-image--vide { aspect-ratio: 1; display: grid; place-items: center; margin: 0.9rem 0.9rem 0; border-radius: 1.4rem; border: 2px dashed rgb(68 47 41 / 0.28); background: var(--sable); }
