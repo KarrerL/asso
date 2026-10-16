@@ -45,9 +45,13 @@
     const ajuster = () => {
       const tour = chemin.getTotalLength();
       const base = parseFloat(getComputedStyle(t).fontSize);
-      // getComputedTextLength ignore l'espacement des lettres : on l'ajoute
+      // Chrome et Firefox ne comptent pas l'espacement des lettres de la même façon :
+      // on mesure sans espacement, puis on l'ajoute nous-mêmes
       const espace = (parseFloat(getComputedStyle(t).letterSpacing) || 0) * t.getNumberOfChars();
+      const ls = t.style.letterSpacing;
+      t.style.letterSpacing = "0px";
       const longueur = t.getComputedTextLength() + espace;
+      t.style.letterSpacing = ls;
       if (longueur > 0) t.style.fontSize = `${(base * tour * 0.97) / longueur}px`;
     };
     (document.fonts ? document.fonts.ready : Promise.resolve()).then(ajuster);
