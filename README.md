@@ -11,7 +11,6 @@ Toutes les infos provisoires sont visibles sur le site (soulignées en pointill�
 
 | Élément | Où |
 |---|---|
-| E-mail, Instagram | chercher `E-mail à venir` et `Instagram à venir` |
 | Lien du sondage | chercher `Lien du sondage à venir` (menu.html, participer.html) |
 | RNA, SIRET, hébergeur | mentions-legales.html |
 | Coordonnées bancaires | participer.html, section Soutenir |
