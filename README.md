@@ -25,7 +25,10 @@ La charte SAE impose l'accord du chef de département avant toute communication 
 Chaque mention est balisée `<span data-iut>` pour être retrouvée facilement. Aucun logo IUT n'est utilisé.
 
 ## Technique
-- Polices Telma, Supreme, Gambarino (Fontshare, licence ITF FFL), intégrées en base64 dans `assets/css/polices.css` (fonctionne aussi en ouvrant le site depuis le disque). Les .woff2 d'origine restent dans `assets/fonts/`.
+- Polices Telma et Supreme (Fontshare, licence ITF FFL), intégrées en base64 dans `assets/css/polices.css` (fonctionne aussi en ouvrant le site depuis le disque). Les .woff2 d'origine restent dans `assets/fonts/`.
+- Police du logo (Vabedo, Wahyu Eka Prasetya) : utilisée pour les grands titres (h1, h2), la devise, les chiffres (prix, compte à rebours) et les textes en cercle. Le fichier d'origine n'a pas d'accents : la version du site (« Vabedo PANGEA ») y ajoute les lettres accentuées du français, « », …, – et €, construites à partir des signes de la police. Elle est aussi intégrée en base64 dans `polices.css`.
+  - Effet autocollant (bord crème + liseré et ombre encre, comme le logo) : classe `autocollant` + attribut `data-t` (même texte) sur l'élément. Le calque de fond utilise « Vabedo PANGEA Plein » (creux des lettres bouchés).
+  - ⚠️ Licence : le fichier Vabedo ne contient aucune licence. Avant la mise en ligne publique, vérifier auprès de l'auteur que l'usage sur un site web (et la modification pour ajouter les accents) est autorisé.
 - Animations : GSAP + ScrollTrigger, en local dans `assets/js/vendor/`.
 - Le contenu reste lisible sans JavaScript ; l'option système « réduire les animations » est respectée.
 - Aucun cookie, aucune mesure d'audience.
