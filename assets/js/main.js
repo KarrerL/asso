@@ -247,9 +247,11 @@
   document.querySelectorAll("[data-split]").forEach((el) => {
     const mots = el.textContent.trim().split(/[ \n\t]+/); // garde les espaces insécables
     el.setAttribute("aria-label", el.textContent.trim());
+    const colle = el.classList.contains("autocollant");
     el.innerHTML = mots
-      .map((m) => `<span aria-hidden="true" style="display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em"><span class="mot" style="display:inline-block">${m}</span></span>`)
+      .map((m) => `<span class="mot-cadre" aria-hidden="true"><span class="mot" style="display:inline-block"${colle ? ` data-t="${m}"` : ""}>${m}</span></span>`)
       .join(" ");
+    if (colle) el.classList.add("est-decoupe");
     G.from(el.querySelectorAll(".mot"), {
       yPercent: 110, rotate: 6, duration: 1.1, ease: "expo.out", stagger: 0.07,
       scrollTrigger: { trigger: el, start: "top 88%", once: true },
